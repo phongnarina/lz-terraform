@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "workload_dev_account" {
-    source = "../modules/vpc-nonlz"
+    source = "./modules/vpc-nonlz"
     #Prefix
     env_name = var.env_name
     #VPC CIDR
