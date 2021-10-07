@@ -1,7 +1,3 @@
-#VPC ID, CIDR
-output "vpc_id" {
-    value = aws_vpc.vpc.id
-}
-output "vpc_cidr" {
-    value = aws_vpc.vpc.cidr_block
+output "vpc_cidr_block" {
+    value = module.workload_dev_account.vpc_cidr
 }

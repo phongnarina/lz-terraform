@@ -1,26 +1,19 @@
-#Prefix
 variable "env_name" {
-}
-#VPC CIDR
-variable "vpc_cidr" {
-    description = "prduction VPC Cidr Block"
+    description = "Environment Name"
+    default = "workload-dev"
 }
 
-variable "vpc_cidr_non_ex" {
-    description = "prduction Non Expose VPC Cidr Block"
+variable "vpc_cidr" {
+    description = "Prduction VPC CIDR Block"
+    default = "172.28.0.0/22"
 }
 
 variable "az" {
-    description = "avalability zone for this account"
-    type = list
+    description = "Availability-zone for this vpc"
+    default = ["ap-southeast-1b", "ap-southeast-1c", "ap-southeast-1a"]
 }
 
 variable "az_name" {
-    description = "avalability zone name for this account"
-    type = list
-}
-
-# #Flowlogs Bucket
-variable "flowlogs_s3_bucket" {
-    description = "s3 vpc flowlogs bucket"
+    description = "Availability-zone name for this vpc"
+    default = ["b", "c", "a"]
 }
