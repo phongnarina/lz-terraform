@@ -1,7 +1,3 @@
-provider "aws" {
-    region = "ap-southeast-1"
-}
-
 module "workload_dev_account" {
     source = "./modules/vpc-non-lz"
     #Prefix
